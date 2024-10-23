@@ -4,14 +4,12 @@ import './Header.css';
 
 const Header = () => {
   const [inputValue, setInputValue] = useState('');
-  const { handleAddTask } = useTasks();  // Extraemos la función del contexto
+  const { handleAddTask } = useTasks(); 
 
-  // Función para manejar el evento al presionar Enter
   const handleKeyDown = (e) => {
-    // Si presiona Enter y el input no está vacío
     if (e.key === 'Enter' && inputValue.trim()) {
-      handleAddTask(inputValue.trim());  // Llamamos a la función para añadir la tarea
-      setInputValue('');  // Limpiar el input
+      handleAddTask(inputValue.trim());  
+      setInputValue('');  
     }
   };
 
@@ -22,10 +20,10 @@ const Header = () => {
       <input className='placeholder'
         type="text"
         value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}  // Actualiza el valor del input
-        onKeyDown={handleKeyDown}  // Detecta cuando el usuario presiona Enter
+        onChange={(e) => setInputValue(e.target.value)}  
+        onKeyDown={handleKeyDown}  
         placeholder="Type new todo"
-        autoFocus  // El input se enfoca al cargar la página
+        autoFocus  
       />
     </header>
   );

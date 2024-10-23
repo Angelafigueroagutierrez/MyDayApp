@@ -1,21 +1,17 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-// Clave de LocalStorage
 const LOCAL_STORAGE_KEY = 'mydayapp-reactjs';
 
-// Obtener las tareas desde LocalStorage
 const getStoredTasks = () => {
   const storedTasks = localStorage.getItem(LOCAL_STORAGE_KEY);
   return storedTasks ? JSON.parse(storedTasks) : [];
 };
 
-// Contexto y provider de tareas
 const TaskContext = createContext();
 
 export const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState(getStoredTasks);
 
-  // Guardar las tareas
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(tasks));
   }, [tasks]);
