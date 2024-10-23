@@ -1,0 +1,96 @@
+.todo-list li {
+    position: relative;
+    font-size: 24px;
+    border-bottom: 1px solid #ededed;
+    padding: 15px 15px 15px 60px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .todo-list li.completed label {
+    text-decoration: line-through;
+    color: #d9d9d9;
+  }
+  
+  .todo-list li.editing {
+    border-bottom: none;
+    padding: 0;
+  }
+  
+  .todo-list li.editing .edit {
+    display: block;
+    width: calc(100% - 43px);
+    padding: 13px 17px;
+    margin: 0 0 0 42px;
+  }
+  
+  .todo-list li .view {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .todo-list li .view .toggle {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .todo-list li .view .toggle:before {
+  
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 24px;
+    color: #ededed;
+  }
+  
+  .todo-list li .view .toggle:checked:before {
+    color: #00aaff;
+  }
+  
+  .todo-list li .view label {
+    word-break: break-all;
+    padding: 15px 15px 15px 15px;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  
+  .todo-list li .view .destroy {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #dd0d0d;
+  }
+  
+  .todo-list li .view .destroy:before {
+    content: '\f1f8'; 
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 24px;
+  }
+  
+  .todo-list li:hover .destroy {
+    display: block;
+  }
+  
+  .edit {
+    display: none;
+    width: calc(100% - 43px);
+    padding: 13px 17px;
+    font-size: 24px;
+    line-height: 1.4em;
+    border: 1px solid #999;
+    box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+  }
+  
+  

@@ -1,0 +1,23 @@
+.Header-style {
+    text-align: left;
+    background: linear-gradient(135deg, #6B73FF, #000DFF);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+  }
+  
+  .header p {
+    margin: 0;
+    font-size: 1.2rem;
+    opacity: 0.7;
+  }
+  .placeholder{
+    
+    width: calc(100% - 40px);
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #f3f1f1;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
