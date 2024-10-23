@@ -1,4 +1,3 @@
-// src/components/TaskItem.jsx
 import React, { useState } from 'react';
 import { useTasks } from '../../context/TaskContext';
 import './TaskItem.css';
